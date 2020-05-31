@@ -1,0 +1,31 @@
+cmake_minimum_required (VERSION 3.8)
+
+project(BuckyBase)
+
+add_definitions(-DBFX_STATIC)
+
+include_directories(../)
+include_directories(../BuckyFramework)
+
+aux_source_directory(. SRCS)
+aux_source_directory(./crt SRCS)
+aux_source_directory(./Atomic SRCS)
+aux_source_directory(./Time SRCS)
+aux_source_directory(./TLS SRCS)
+aux_source_directory(./Lock SRCS)
+aux_source_directory(./thread SRCS)
+aux_source_directory(./Coll SRCS)
+aux_source_directory(./Timer SRCS)
+aux_source_directory(./Transcode SRCS)
+aux_source_directory(./Memory SRCS)
+aux_source_directory(./String SRCS)
+aux_source_directory(./Random SRCS)
+aux_source_directory(./Buffer SRCS)
+aux_source_directory(./debug SRCS)
+aux_source_directory(./Path SRCS)
+aux_source_directory(./events SRCS)
+aux_source_directory(./File SRCS)
+aux_source_directory(./log SRCS)
+aux_source_directory(./Global SRCS)
+
+add_library(${PROJECT_NAME} STATIC ${SRCS})

@@ -1,0 +1,30 @@
+cmake_minimum_required (VERSION 3.4)
+set(CMAKE_DISABLE_IN_SOURCE_BUILD ON)
+
+# 只允许build tree在 其他目录 下
+if(CMAKE_BINARY_DIR STREQUAL CMAKE_SOURCE_DIR)
+	message(FATAL_ERROR "FATAL: builds must NOT in {SOURCE_DIR}")
+endif()
+
+project(BDT2)
+include(./cconfig.cmake)
+
+set(LIBRARY_OUTPUT_PATH "${CMAKE_SOURCE_DIR}/lib/${TARGET_NAME}/${BITS}/${CMAKE_BUILD_TYPE}/")
+set(EXECUTABLE_OUTPUT_PATH "${CMAKE_SOURCE_DIR}/bin/${TARGET_NAME}/${BITS}/${CMAKE_BUILD_TYPE}/")
+set(COMPILE_PDB_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/pdb/${TARGET_NAME}/${BITS}/${CMAKE_BUILD_TYPE}/")
+set(PDB_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/pdb/${TARGET_NAME}/${BITS}/${CMAKE_BUILD_TYPE}/")
+include_directories(./3rd/libuv-1.29.1/include)
+
+add_subdirectory(./3rd/mbedtls-2.16.1)
+add_subdirectory(./3rd/libuv-1.29.1)
+add_subdirectory(./3rd/sqlite3-3.29.0)
+add_subdirectory(./3rd/zlib-1.2.11)
+add_subdirectory(./src/BDTCore)
+add_subdirectory(./src/BuckyFramework)
+add_subdirectory(./src/BuckyBase)
+add_subdirectory(./test/buckyBaseTest)
+add_subdirectory(./test/bdtCoreTest)
+add_subdirectory(./test/packageConnTest)
+add_subdirectory(./test/autoTestDemo)
+add_subdirectory(./UnitTests)
+add_subdirectory(./Profiler)

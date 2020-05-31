@@ -1,0 +1,2 @@
+include ':app', ':myapplication', ':bdt'
+rootProject.name='Bdt2'

@@ -50,3 +50,14 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+dist
+node_modules*
+.vscode
+.tern-port
+*.org
+test.sh
+.DS_Store
+*/.vs
+c/output
+/.vs
