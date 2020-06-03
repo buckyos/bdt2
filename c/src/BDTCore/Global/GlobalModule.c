@@ -1,0 +1,12 @@
+#ifndef __BDT_GLOBAL_MODULE_IMPL__
+#define __BDT_GLOBAL_MODULE_IMPL__
+#include "./CryptoToolkit.imp.inl"
+#include "./Endpoint.imp.inl"
+#include "./IdCreator.imp.inl"
+#include "./Peerid.imp.inl"
+#include "./PeerInfo.imp.inl"
+#include "./SequenceCreator.imp.inl"
+#include "./StackTls.imp.inl"
+#include "./TimerHelper.imp.inl"
+#include "./Statistics.imp.inl"
+#endif //__BDT_GLOBAL_MODULE_IMPL__

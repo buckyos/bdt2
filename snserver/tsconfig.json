@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "ES2017",
+        "strict": true,
+        "inlineSourceMap": true,
+        "outDir": "dist/",
+        "types": [
+            "node"
+        ]
+    },
+    "include": [
+        "src/**/*",
+        "demo/**/*",
+        "test/**/*", 
+        "tool/**/*",
+    ],
+    "exclude": [
+        "src/**/flycheck_*",
+        "demo/**/flycheck_*",
+        "test/**/flycheck_*"
+    ]
+}

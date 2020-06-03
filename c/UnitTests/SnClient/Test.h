@@ -1,0 +1,6 @@
+#ifndef __BDT_SUPERNODE_CLIENT_UNIT_TEST_H__
+#define __BDT_SUPERNODE_CLIENT_UNIT_TEST_H__
+
+void BdtSuperNodeClient_UnitTest();
+
+#endif //__BDT_SUPERNODE_CLIENT_UNIT_TEST_H__
